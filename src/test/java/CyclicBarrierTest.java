@@ -42,6 +42,7 @@ public class CyclicBarrierTest {
                     Thread.sleep(random.nextInt(1000));
                     System.out.println(Thread.currentThread().getName() + Instant.now().getEpochSecond()+ "完成任务一");
 
+                    //可循环使用，countDownLatch 不可以
                     start.await();
                     Thread.sleep(random.nextInt(1000));
                     System.out.println(Thread.currentThread().getName() + Instant.now().getEpochSecond()+ "完成任务二");
