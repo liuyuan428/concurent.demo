@@ -1,4 +1,3 @@
-import lombok.extern.slf4j.Slf4j;
 import lombok.extern.slf4j.XSlf4j;
 import org.junit.jupiter.api.Test;
 
@@ -7,7 +6,7 @@ import java.util.Random;
 import java.util.concurrent.*;
 
 
-@XSlf4j
+
 public class CyclicBarrierTest {
 
     /**
@@ -51,6 +50,7 @@ public class CyclicBarrierTest {
                 }
             }).start();
         }
+        wait();
         Thread.sleep(2000);
     }
 
